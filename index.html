@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A web-based two-factor authentication code generator.">
+    <meta name="keywords" content="2fa, two-factor authentication, authentication, security">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>2factor by Ferretosan</title>
+</head>
+<body>
+    <header>
+        <h1><span class="name">2factor</span></h1>
+        <p>A web-based two-factor authentication code generator.</p>
+    </header>
+    <main>
+        <section id="add-account">
+            <h2>Add a new account</h2>
+            <form>
+                <label for="account-name">Account name:</label>
+                <input type="text" id="account-name" name="account-name" required>
+                <label for="secret-key">Secret key:</label>
+                <input type="text" id="secret-key" name="secret-key" required>
+                <label for="account-color">Color:</label>
+                <div id="color-picker">
+                    <input type="radio" id="color-purple" name="account-color" value="purple" checked>
+                    <label for="color-purple" class="color-option" style="background-color: #a855f7;"></label>
+                    
+                    <input type="radio" id="color-pink" name="account-color" value="pink">
+                    <label for="color-pink" class="color-option" style="background-color: #ec4899;"></label>
+                    
+                    <input type="radio" id="color-red" name="account-color" value="red">
+                    <label for="color-red" class="color-option" style="background-color: #ef4444;"></label>
+                    
+                    <input type="radio" id="color-orange" name="account-color" value="orange">
+                    <label for="color-orange" class="color-option" style="background-color: #f97316;"></label>
+                    
+                    <input type="radio" id="color-yellow" name="account-color" value="yellow">
+                    <label for="color-yellow" class="color-option" style="background-color: #eab308;"></label>
+                    
+                    <input type="radio" id="color-green" name="account-color" value="green">
+                    <label for="color-green" class="color-option" style="background-color: #22c55e;"></label>
+                    
+                    <input type="radio" id="color-blue" name="account-color" value="blue">
+                    <label for="color-blue" class="color-option" style="background-color: #3b82f6;"></label>
+                    
+                    <input type="radio" id="color-indigo" name="account-color" value="indigo">
+                    <label for="color-indigo" class="color-option" style="background-color: #6366f1;"></label>
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </section>
+        <section id="codes">
+            <div class="codes-header">
+                <h2>Your codes</h2>
+                <div class="export-import-buttons">
+                    <button id="export-btn" class="secondary-btn">Export</button>
+                    <button id="import-btn" class="secondary-btn">Import</button>
+                    <input type="file" id="import-file" accept=".json" style="display: none;">
+                </div>
+            </div>
+            <div id="codes-container">
+                <!-- Codes will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Made by Ferretosan<br><a href="https://ferretosan.com/#hub">Check out other projects like this!</a></p>
+    </footer>
+</body>
+</html>
